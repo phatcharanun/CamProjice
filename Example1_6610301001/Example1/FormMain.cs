@@ -240,6 +240,8 @@ namespace Example1
                 buttonStsrt.Text = "Pause";
                 ShowStsrt.BackColor = Color.Green;
                 ShowStsrt.Text = "Record";
+                checkBoxRecognizer.Enabled = false;
+                checkBoxSnpshot.Enabled = false;
                 buttonConnect.Enabled = false;
 
                 if (_capture != null)
@@ -255,7 +257,9 @@ namespace Example1
                 snapshotTimer.Stop();
                 buttonStsrt.Text = "Start";
                 ShowStsrt.BackColor = Color.Red;
-                ShowStsrt.Text = "No record";
+                ShowStsrt.Text = "No record"; 
+                checkBoxRecognizer.Enabled = true;
+                checkBoxSnpshot.Enabled = true;
                 buttonConnect.Enabled = true;
 
                 try
